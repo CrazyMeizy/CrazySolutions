@@ -1,0 +1,39 @@
+# Игнорировать скомпилированные файлы Java
+*.class
+
+# Игнорировать директории сборки
+/target/
+/bin/
+/out/
+
+# Игнорировать файлы среды разработки
+.idea/
+.vscode/
+
+# Игнорировать файлы конфигурации Maven
+*.iml
+*.ipr
+*.iws
+.idea
+target/
+.idea/
+*.log
+*.iml
+*.ipr
+*.iws
+
+# Игнорировать файлы конфигурации Gradle
+.gradle/
+build/
+
+# Игнорировать файлы конфигурации Eclipse
+.settings/
+.classpath
+.project
+
+# Игнорировать файлы конфигурации NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
