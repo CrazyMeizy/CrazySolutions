@@ -17,4 +17,4 @@ There is my perfect code
 [Конвертвер языков разметки](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java-solutions/md2html), с поддержкой преобразования markdown файлов в файлы форматов html и
 BBCode.
 
-![Нойс](https://masterpiecer-images.s3.yandex.net/b2d91936767a11eeb11ee6d39d9a42a4:upscaled)
+![Нойс]("Фей Валентайн.png")
