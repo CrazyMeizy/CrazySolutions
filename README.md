@@ -16,5 +16,3 @@ There is my perfect code
 
 [Конвертвер языков разметки](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java-solutions/md2html), с поддержкой преобразования markdown файлов в файлы форматов html и
 BBCode.
-
-![Нойс](https://github.com/CrazyMeizy/CrazySolutions/blob/main/Фей%20Валентайн.png?raw=true)
