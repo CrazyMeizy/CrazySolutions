@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: info.kgeorgiy.ja.chuprov.implementor.Implementor
+Class-Path: ../../shared/artifacts/info.kgeorgiy.java.advanced.implementor.jar ../../shared/artifacts/info.kgeorgiy.java.advanced.implementor.tools.jar
+
