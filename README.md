@@ -27,4 +27,4 @@ BBCode.
 
 ## Implementor
 
-[Имплементор интерфейсов](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/implementor/Implementor.java) - класс для автоматической генерации дэфолтной реализации интрефейса. Реализовано с активным использованием Reflection API.
+[Имплементор интерфейсов](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/implementor/Implementor.java) - класс для автоматической генерации дэфолтной реализации интрефейса. Реализовано с активным использованием Reflection API. Также добавлена возможность генерировать jar-файл с реализованным интерфейсом.
