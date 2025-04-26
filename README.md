@@ -16,3 +16,15 @@ There is my perfect code
 
 [Конвертвер языков разметки](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java-solutions/md2html), с поддержкой преобразования markdown файлов в файлы форматов html и
 BBCode.
+
+## FileWalker
+
+[Волкер по файловой системе](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/walk) - приложение для обхода дерева файлов с выполнением операции для каждого файла. В данной реализации - подсчет хэш-суммы.
+
+## ParallelMapper
+
+[Параллельный маппер](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/iterative/ParallelMapperImpl.java) - класс для применения функции к элементам списка параллельно. Количество потоков задается в конструкторе класса, класс является AutoClosable. Реализация сделана на основе модели Producer-Consumer.
+
+## Implementor
+
+[Имплементор интерфейсов](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/implementor/Implementor.java) - класс для автоматической генерации дэфолтной реализации интрефейса. Реализовано с активным использованием Reflection API.
