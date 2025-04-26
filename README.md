@@ -19,7 +19,7 @@ BBCode.
 
 ## FileWalker
 
-[Волкер по файловой системе](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/walk) - приложение для обхода дерева файлов с выполнением операции для каждого файла. В данной реализации - подсчет хэш-суммы.
+[Обходитель файловой системы](https://github.com/CrazyMeizy/CrazySolutions/blob/main/java-solutions-course-2/solutions/java-solutions/info/kgeorgiy/ja/chuprov/walk) - приложение для обхода дерева файлов с выполнением операции для каждого файла. В данной реализации - подсчет хэш-суммы.
 
 ## ParallelMapper
 
