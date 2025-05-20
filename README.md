@@ -3,12 +3,12 @@
 
 ## Java
 
-#### Expression Parser
+#### - Expression Parser
 
 [Парсер математических выражений](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java/java-solutions-course-1/expression/exceptions) в объекты с поддержкой строкового
 вывода, вычисления с переменными, а так же обработкой ошибок считывания и вычисления. Так же реализована версия [программы с использованием generic типов](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java/java-solutions-course-1/expression/generic).
 
-#### MNK
+- #### MNK
 
 [Игра MNK](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java/java-solutions-course-1/game) - расширенная версия игры в крестики нолики, написанная на Java с использованием всех
 принципов ООП, добавлена поддержка, игры с ботами разного уровня сложности, реализована версия игры
