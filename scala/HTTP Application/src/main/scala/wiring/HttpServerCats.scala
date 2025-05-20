@@ -25,8 +25,6 @@ final case class HttpServerCats(
 
 object HttpServerCats {
 
-  /** Generate the OpenAPI spec by the given endpoints, and then add swagger endpoint to endpoints.
-    */
   private def withDocs[F[_], R](
       endpoints: List[ServerEndpoint[R, F]],
       config: ZoneConfig
@@ -41,8 +39,6 @@ object HttpServerCats {
     if (config.swaggerEnabled) endpoints ::: SwaggerUI[F](openApi) else endpoints
   }
 
-  /** Immediately starts the server with the given endpoints on the given port (from [[ZoneConfig]]).
-    */
   private def registerZone[F[_]: Async](
       endpoints: List[ServerEndpoint[Fs2Streams[F] with WebSockets, F]],
       config: ZoneConfig,
@@ -51,24 +47,21 @@ object HttpServerCats {
   ): Resource[F, HttpServer] =
     Resource.make {
       Sync[F].defer {
-        // server and router are mutable classes, so we have a new one for each zone
         val server = vertx.createHttpServer()
         val router = Router.router(vertx)
 
-        // register each endpoint in router
         endpoints.foreach(
           VertxCatsServerInterpreter(options)
             .route(_)
             .apply(router)
         )
 
-        // register router with all endpoints in server, and start server (listen)
         server
           .requestHandler(router)
           .listen(config.port, config.host)
           .asF[F]
       }
-    }(_.close().asF[F].void) // close server on exit
+    }(_.close().asF[F].void)
 
   def startServer[F[_]: Async: Console](
       publicApi: List[Controller[F]],
@@ -77,24 +70,20 @@ object HttpServerCats {
     for {
       _ <- Resource.make(Console[F].println("Starting server..."))(_ => Console[F].println("Server stopped"))
 
-      dispatcher <- Dispatcher.parallel[F] // create dispatcher for server
-      prometheusMetrics = PrometheusMetrics.default[F](namespace = "http") // register metrics collectors
+      dispatcher <- Dispatcher.parallel[F]
+      prometheusMetrics = PrometheusMetrics.default[F](namespace = "http")
 
-      // Get all tapir endpoints and add swagger endpoint for them
       publicEndpoints     = withDocs(publicApi.flatMap(_.all), config.internal)
       monitoringEndpoints = withDocs(List(prometheusMetrics.metricsEndpoint), config.monitoring)
-
-      // Server ops (register metrics)
+        
       serverOptions: VertxCatsServerOptions[F] =
         VertxCatsServerOptions
           .customiseInterceptors[F](dispatcher)
           .metricsInterceptor(prometheusMetrics.metricsInterceptor())
           .options
 
-      // Init server runtime
       server <- Resource.make(Sync[F].delay(Vertx.vertx()))(_.close().asF[F].void)
-
-      // Starts the server in the 2 zones
+        
       publicServer     <- registerZone[F](publicEndpoints, config.internal, server, serverOptions)
       monitoringServer <- registerZone[F](monitoringEndpoints, config.monitoring, server, serverOptions)
 
