@@ -1,6 +1,16 @@
 # CrazySolutions
 ## Scala
 
+- #### [Encoder/Decoder for JSON](https://github.com/CrazyMeizy/CrazySolutions/tree/main/scala/Decoder_Encoder/src)
+
+- #### [Doobie application](https://github.com/CrazyMeizy/CrazySolutions/tree/main/scala/Doobie%20Application/src/main/scala/db_app)
+
+- #### [HTTP application](https://github.com/CrazyMeizy/CrazySolutions/tree/main/scala/HTTP%20Application/src/main/scala)
+
+- #### [My IO Monad](https://github.com/CrazyMeizy/CrazySolutions/tree/main/scala/IO%20Monad/src)
+
+- #### [Apps from T-Bank course](https://github.com/CrazyMeizy/CrazySolutions/tree/main/scala/T-Bank%20Course)
+  
 ## Java
 
 - #### Expression Parser
