@@ -4,7 +4,7 @@ There is my perfect code
 ## Expression Parser
 
 [Парсер математических выражений](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java/java-solutions-course-1/expression/exceptions) в объекты с поддержкой строкового
-вывода, вычисления с переменными, а так же обработкой ошибок считывания и вычисления. Так же реализована версия [программы с использованием generic типов](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java-solutions/expression/generic).
+вывода, вычисления с переменными, а так же обработкой ошибок считывания и вычисления. Так же реализована версия [программы с использованием generic типов](https://github.com/CrazyMeizy/CrazySolutions/tree/main/java/java-solutions-course-1/expression/generic).
 
 ## MNK
 
